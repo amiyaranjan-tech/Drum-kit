@@ -51,7 +51,7 @@ function makeSound(key)
             var snare = new Audio("sounds/snare.mp3");
             snare.play();
             break;
-        default: console.log(Button not defined);
+        default: console.log("Button not defined");
     }
 }
 
