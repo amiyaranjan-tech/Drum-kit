@@ -1,22 +1,19 @@
 
-//DETECTING BUTTON PRESS via mouse click
+//Detecting button presses via mouse click
 
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) 
 {
     document.querySelectorAll(".drum")[i].addEventListener("click", function (){
         var buttonInnerHtml = this.innerHTML;
-        makeSound(buttonInnerHtml); //OVERIDED FUNCTION    
+        makeSound(buttonInnerHtml);    
         makeTransparent(buttonInnerHtml);
     });
 }
 
-//DETECTING KEYBOARD PRESS
+//Detecting button presses via keyboard
 
-document.addEventListener("keydown", function(event) {  
-    //Here, function will wait for the event to occur and 
-    // gather details of the event. Then we can manipulate this info to extract what we need. 
-    // Like here we needed to know what key was pressed. Hence "event.key" below. 
-    makeSound(event.key); //OVERIDED FUNCTION
+document.addEventListener("keydown", function(event) { 
+    makeSound(event.key); 
     makeTransparent(event.key);
 })
 
@@ -54,7 +51,7 @@ function makeSound(key)
             var snare = new Audio("sounds/snare.mp3");
             snare.play();
             break;
-        default: console.log(buttonInnerHtml);
+        default: console.log(Button not defined);
     }
 }
 
